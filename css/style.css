@@ -170,7 +170,7 @@ input:focus {
     Media-Query
 ===================*/
 
-@media (min-width:600px) {
+@media (min-width:675px) {
 
     /* typography */
     body {
