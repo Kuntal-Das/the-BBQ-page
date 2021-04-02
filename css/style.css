@@ -186,18 +186,13 @@ input:focus {
         font-size: 1.75rem;
     }
 
-    /* .banner{
-        justify-content: initial;
-    }
     .banner-title {
-        align-self: flex-end;
         margin-bottom: 0;
     }
-    
+
     .banner-subtitle {
-        align-self: flex-end;
         margin-bottom: 25vh;
-    } */
+    }
 
     .form,
     .banner {
