@@ -186,14 +186,6 @@ input:focus {
         font-size: 1.75rem;
     }
 
-    .banner-title {
-        margin-bottom: 0;
-    }
-
-    .banner-subtitle {
-        margin-bottom: 25vh;
-    }
-
     .form,
     .banner {
         width     : 50%;
