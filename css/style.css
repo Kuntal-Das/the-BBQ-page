@@ -1,0 +1,213 @@
+:root {
+    --clr-accent    : #f18119;
+    --clr-dark      : #404040;
+    --clr-light     : #fff;
+    --clr-light-gary: #989898;
+    --clr-grad-left : #ffa51d;
+    --clr-grad-right: #ff713b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin     : 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size  : 1rem;
+    color      : var(--clr-dark);
+    text-align : center;
+    min-height : 100vh;
+}
+
+/*===================
+    Typography 
+===================*/
+
+h1 {
+    margin     : 0;
+    font-size  : 2.25rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin   : 0;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.banner-title {
+    color : var(--clr-light);
+    margin: 1em 0;
+}
+
+.banner-subtitle {
+    color         : var(--clr-accent);
+    font-weight   : 900;
+    text-transform: uppercase;
+}
+
+.banner-tagline {
+    font-size     : 0.625rem;
+    font-weight   : 900;
+    color         : var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-subtitle {
+    font-size     : 1em;
+    font-weight   : 900;
+    color         : var(--clr-accent);
+    text-transform: uppercase;
+}
+
+.disclaimer {
+    font-size     : 0.625rem;
+    color         : var(--clr-light-gary);
+    letter-spacing: 1px;
+}
+
+/*===================
+    Layout 
+===================*/
+
+/* Banner */
+
+.banner {
+    padding                  : 0 0.25em 2em;
+    /* background-image      : url(../imgs/dark-ribs.jpg); */
+    /* background-image      : url(../imgs/ribs.jpg), linear-gradient(135deg, red, blue); */
+    background-image         : url(../imgs/ribs.jpg);
+    background-color         : var(--clr-dark);
+    background-blend-mode    : overlay;
+    background-size          : cover;
+    background-position      : center;
+    display                  : flex;
+    flex-direction           : column;
+    justify-content          : space-between;
+    align-items              : center;
+    min-height               : 50vh;
+}
+
+.banner-tagline {
+    padding-top : 0.65em;
+    margin-top  : 0;
+    order       : -1;
+    border-top  : 5px solid var(--clr-accent);
+    border-image: linear-gradient(90deg, var(--clr-grad-left), var(--clr-grad-right)) 1;
+}
+
+/* form area */
+
+.form {
+    padding: 2em 1em;
+}
+
+.banner>*,
+.form>* {
+    max-width   : 460px;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+
+/*===================
+    Form
+===================*/
+.email-collector {
+    width    : 80%;
+    max-width: 300px;
+}
+
+input,
+.btn {
+    width        : 100%;
+    border-radius: 5px;
+}
+
+input {
+    font         : inherit;
+    margin-bottom: 0.75em;
+    padding      : 0.25em;
+    text-align   : inherit;
+    border       : 1px solid var(--clr-dark);
+    transform    : scale(1);
+    transition   : transform 250ms;
+}
+
+input:focus {
+    transform: scaleX(1.05);
+}
+
+.btn {
+    display       : inline-block;
+    font-size     : 0.625rem;
+    font-weight   : 800;
+    padding       : 1.1em 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border        : none;
+    cursor        : pointer;
+}
+
+.btn-submit {
+    color           : var(--clr-light);
+    background-image: linear-gradient(90deg, var(--clr-grad-left), var(--clr-grad-right));
+    transform       : scale(1);
+    transition      : transform 250ms;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    transform: scale(1.05);
+}
+
+/*===================
+    Media-Query
+===================*/
+
+@media (min-width:600px) {
+
+    /* typography */
+    body {
+        font-size: 1.125rem;
+        display  : flex;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    /* .banner{
+        justify-content: initial;
+    }
+    .banner-title {
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+    
+    .banner-subtitle {
+        align-self: flex-end;
+        margin-bottom: 25vh;
+    } */
+
+    .form,
+    .banner {
+        width     : 50%;
+        min-height: 100vh;
+    }
+
+    .form {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+    }
+}

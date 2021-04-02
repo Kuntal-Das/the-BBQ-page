@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBQ Splash Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <title>Become a BBQ Master!</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <div class="banner">
+        <h1 class="banner-title">Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
+        <h2 class="banner-subtitle">Join us for the live webinar</h2>
+        <p class="banner-tagline">Mouthwateringly delicious</p>
+    </div>
+    <div class="form">
+        <h2 class="form-title">Become a BBQ master!</h2>
+        <h3 class="form-subtitle">Register today</h3>
+        <p class="form-desc">
+            BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art!
+            One way to speed up the process is to learn from the best. You can do just that by signing up for this free
+            webinar!
+        </p>
+        <form id="emailCollector" class="email-collector" action="#" method="POST">
+            <input name="fName" required aria-level="first name" type="text" placeholder="first name" />
+            <input name="email" required aria-level="email" type="email" placeholder="email" />
+            <button class="btn btn-submit" type="submit">Register</button>
+        </form>
+        <p class="disclaimer">We'll never share your informationwithout your permission</p>
+    </div>
+
+    <script>
+        let emailCollectorForm = document.getElementById("emailCollector")
+
+        emailCollectorForm.addEventListener("submit", event => {
+
+            event.preventDefault()
+
+            let formData = new FormData(event.target)
+
+            let usrName = formData.get("fName")
+            // let email = formData.get("email")
+
+            let msgData = `
+                <h2 class="form-title">Congratulations, ${usrName}!</h2>
+                <h3 class="form-subtitle">You're on your way to becoming a BBQ Master!</h3>
+                <p class="disclaimer">We'll never share your informationwithout your permission</p>
+            `
+            let formDiv = document.querySelector(".form")
+            formDiv.innerHTML = msgData;
+        })
+    </script>
 </body>
+
 </html>
